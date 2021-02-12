@@ -1,0 +1,18 @@
+---
+application:
+  name: "redash"
+  project: "hirros-redash"
+  organization: "QoveryCommunity"
+databases:
+- type: "REDIS"
+  name: "hirros-redash-redis"
+  version: "6"
+- type: "POSTGRESQL"
+  name: "hirros-redash"
+  version: "9"
+routers:
+- name: "main-redash"
+  routes:
+  - application_name: "redash"
+    paths:
+    - "/*"
